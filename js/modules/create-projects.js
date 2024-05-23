@@ -8,7 +8,7 @@ export default function createProjects() {
         category: 'Coding',
         description: 'Aplicação criada para clínica odontológica',
         tools: 'HTML, CSS, JavaScript e SASS',
-        image: '../../../../assets/projetos/odontoclinic.png',
+        // image: '../../../../assets/projetos/odontoclinic.png',
         siteLink: 'https://odontoclinic.vercel.app/',
         githubLink: 'https://github.com/manoela-moyses/site-saude'
       },
