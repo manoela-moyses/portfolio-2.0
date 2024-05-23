@@ -9,7 +9,7 @@ export default function createProjects() {
         description: 'Versão 1.0 do site porfólio para apresentação dos meus projetos',
         tools: 'HTML, CSS e JavaScript',
         image: '../../../../assets/projetos/meu-portfolio.png',
-        siteLink: 'https://manoelamoyses.vercel.app/',
+        siteLink: 'https://manoela-moyses.github.io/portfolio-1.0/',
         githubLink: 'https://github.com/manoela-moyses/portfolio-1.0'
       },
       {
