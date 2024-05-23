@@ -4,6 +4,15 @@ export default function createProjects() {
   let projects = {
     data: [
       {
+        projectName: 'Portfólio 1.0',
+        category: 'Coding',
+        description: 'Versão 1.0 do site porfólio para apresentação dos meus projetos',
+        tools: 'HTML, CSS e JavaScript',
+        image: '../../../../assets/projetos/meu-portfolio.png',
+        siteLink: 'https://manoelamoyses.vercel.app/',
+        githubLink: 'https://github.com/manoela-moyses/portfolio-1.0'
+      },
+      {
         projectName: 'Odonto Clinic',
         category: 'Coding',
         description: 'Aplicação criada para clínica odontológica',
@@ -217,7 +226,7 @@ export default function createProjects() {
         githubLink: 'https://github.com/manoela-moyses/gitfav'
       },
       {
-        projectName: 'SpaceCream',
+        projectName: 'Space Cream',
         category: 'Coding',
         description: 'Grid com animação criado no Stage 03 do Programa Explorer da Rocketseat',
         tools: 'HTML e CSS',
@@ -402,6 +411,13 @@ export default function createProjects() {
       githubLink.innerText = 'GitHub';
       btnContainer.appendChild(githubLink);
     };
+
+    if (i.category == 'WordPress') {
+      let hiddenButton = document.createElement('button');
+      hiddenButton.classList.add('btn3');
+      hiddenButton.innerText = '';
+      btnContainer.appendChild(hiddenButton);
+    }
 
     let imgContainer = document.createElement('div');
     imgContainer.classList.add('image-container');

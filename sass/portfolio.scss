@@ -134,6 +134,7 @@
     }
     .btn-container {
       display: flex;
+
       align-items: center;
       justify-content: space-between;
       gap: 0.8rem;
@@ -162,6 +163,12 @@
         transform: scale(0.9);
       }
     }
+    .btn3 {
+      height: 3rem;
+      background-color: transparent;
+      border: none;
+      cursor: default;
+    }
     .btn1 {
       background-color: $purple;
     }
@@ -177,5 +184,21 @@
         margin-top: 1.6rem;
       }
     }
+  }
+}
+
+/**************************************************************/
+/* RESPONSIVIDADE ESPECÍFICA DOS CARDS DE PROJETOS */
+@media (max-width: 1439px) and (min-width: 1323px) {
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 1322px) and (min-width: 1280px) {
+  .btn-container {
+    justify-content: start !important;
   }
 }
