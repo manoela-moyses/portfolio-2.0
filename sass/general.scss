@@ -1,0 +1,207 @@
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: $body-color;
+  font-weight: 600;
+  width: 100vw;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 13.6rem;
+  overflow-x: hidden;
+  @include d(medium) {
+    max-width: 720px;
+    padding: 0 2.4rem;
+  }
+  @include d(small) {
+    max-width: 375px;
+    padding: 0 2.4rem;
+  }
+  @include d(x-small) {
+    max-width: 320px;
+    padding: 0 1.8rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  white-space: nowrap;
+}
+
+.btn-section {
+  background-color: $bg-cards;
+  padding: 1.2rem 1rem;
+  border: none;
+  border-radius: 1.6rem;
+  @include font-size(20);
+  color: $pink;
+  margin-top: 14.1rem;
+  margin-bottom: 2.4rem;
+  @include d(medium) {
+    @include font-size(18);
+    margin-top: 7rem;
+    color: $pink;
+  }
+  @include d(small) {
+    @include font-size(14);
+    margin-top: 4rem;
+    margin-bottom: 1.6rem;
+    color: $pink;
+    border-radius: 0.8rem;
+  }
+}
+
+.section-title,
+h1 {
+  @include font-size(48);
+  @include d(medium) {
+    @include font-size(32);
+  }
+  @include d(small) {
+    @include font-size(24);
+  }
+}
+
+.btn-transparent,
+.btn-gradient {
+  border-radius: 1.6rem;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    transform: scale(0.9);
+  }
+  @include d(small) {
+    border-radius: 0.8rem;
+  }
+  a {
+    height: 4.8rem;
+    padding: 1.2rem 2.6rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    @include font-size(16);
+    @include d(small) {
+      height: 4rem;
+      padding: 0 1.2rem;
+      @include font-size(14);
+    }
+  }
+  i {
+    color: $text-color;
+    @include font-size(20);
+    &:hover {
+      transform: scale(1);
+      color: $text-color;
+    }
+  }
+}
+
+.btn-transparent {
+  background: transparent;
+  border: 0.3rem solid $purple;
+}
+
+.btn-gradient {
+  height: 5.6rem;
+  background: $bg-gradient;
+  border: none;
+  @include d(small) {
+    height: 4.8rem;
+  }
+}
+
+.divider {
+  border: 0.1rem solid $hr-color;
+  margin-top: 14.1rem;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  @include d(medium) {
+    margin-top: 7rem;
+  }
+  @include d(small) {
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+  &:nth-child(8) {
+    margin-top: 12.4rem;
+    @include d(medium) {
+      margin-top: 5.3rem;
+    }
+    @include d(small) {
+      margin-top: 4rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+i {
+  @include font-size(32);
+  color: $purple;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    color: $pink;
+    transform: scale(0.8);
+  }
+}
+
+/**************************************************************/
+/* ENTRANCE ANIMATIONS */
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10.6rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.js [data-anime="scroll-left"] {
+  opacity: 0;
+  // transform: translate3d(-30px, 0, 0);
+  transform: translateX(-10.6rem);
+  transition: 0.5s;
+}
+
+.js [data-anime="scroll-left"].ativo {
+  opacity: 1;
+  // transform: translate3d(0, 0, 0);
+  transform: translateX(0);
+}
+
+.js [data-anime="scroll-right"] {
+  opacity: 0;
+  // transform: translate3d(-30px, 0, 0);
+  transform: translateX(10.6rem);
+  transition: 0.5s;
+}
+
+.js [data-anime="scroll-right"].ativo {
+  opacity: 1;
+  // transform: translate3d(0, 0, 0);
+  transform: translateX(0);
+}

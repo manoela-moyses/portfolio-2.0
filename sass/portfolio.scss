@@ -1,0 +1,181 @@
+#portfolio {
+  padding-top: 14.1rem;
+  @include d(medium) {
+    padding-top: 7rem;
+  }
+  @include d(small) {
+    padding-top: 4rem;
+  }
+  > div {
+    display: flex;
+    justify-content: space-between;
+    @include d(inter) {
+      flex-direction: column;
+      .section-title {
+        margin-bottom: 6.4rem;
+      }
+    }
+    @include d(medium) {
+      flex-direction: column;
+      .section-title {
+        margin-bottom: 6.4rem;
+      }
+    }
+    @include d(small) {
+      flex-direction: column;
+      .section-title {
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
+  .projects-buttons {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    @include d(inter) {
+      justify-content: end;
+    }
+    @include d(medium) {
+      justify-content: end;
+    }
+    .main-buttons {
+      display: flex;
+      justify-content: end;
+      gap: 3.2rem;
+      @include d(small) {
+        gap: 0.8rem;
+        margin: 0 auto;
+      }
+      @include d(x-small) {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+    .button-value {
+      border: 0.3rem solid $purple;
+      padding: 1.2rem 2.6rem;
+      height: 4.8rem;
+      width: 15.4rem;
+      border-radius: 1.6rem;
+      background-color: transparent;
+      cursor: pointer;
+      @include font-size(18);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.4s ease-in-out;
+      &:focus,
+      .active {
+        background-color: $purple;
+      }
+      &:hover {
+        transform: scale(0.9);
+      }
+      @include d(small) {
+        height: 4rem;
+        width: 9.4rem;
+        border-radius: 0.8rem;
+        @include font-size(14);
+      }
+    }
+  }
+  #projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 4fr));
+    gap: 1.7rem;
+    justify-items: center;
+    margin-top: 10rem;
+    @include d(inter) {
+      margin-top: 4rem;
+    }
+    @include d(medium) {
+      margin-top: 4rem;
+    }
+    @include d(small) {
+      margin-top: 2.9rem;
+    }
+    .card {
+      margin-bottom: 1.7rem;
+      background-color: transparent;
+      border: 0.3rem solid $purple;
+      border-radius: 1.6rem;
+      width: 100%;
+      max-width: 34.7rem;
+      padding: 3rem;
+      &:hover {
+        background-color: $bg-cards;
+        border: 0.3rem solid $bg-cards;
+      }
+      @include d(small) {
+        margin-bottom: 0;
+        padding: 2.4rem;
+      }
+    }
+    .container-proj {
+      text-align: start;
+      height: 14.6rem;
+      @include d(small) {
+        max-height: 12rem;
+      }
+      h3 {
+        @include font-size(20);
+        margin-bottom: 0.8rem;
+        color: $purple;
+      }
+      p {
+        @include font-size(14);
+        margin-bottom: 0.8rem;
+      }
+      span {
+        @include font-size(14);
+        font-weight: 200;
+      }
+    }
+    .btn-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2.2rem;
+      @include d(medium) {
+        justify-content: start;
+      }
+      @include d(small) {
+        margin-top: 0.8rem;
+        justify-content: start;
+      }
+    }
+    .btn1,
+    .btn2 {
+      height: 3rem;
+      padding: 0.5rem 2rem;
+      border: 0.3rem solid $purple;
+      border-radius: 0.8rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: $text-color;
+      @include font-size(16);
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+    .btn1 {
+      background-color: $purple;
+    }
+    .image-container img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 19.2rem;
+      border: 0.3rem solid $purple;
+      border-radius: 0.8rem;
+      border-collapse: separate;
+      margin-top: 2.2rem;
+      @include d(small) {
+        margin-top: 1.6rem;
+      }
+    }
+  }
+}

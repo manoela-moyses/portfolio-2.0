@@ -1,0 +1,163 @@
+#contato {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 8.2rem;
+  margin-bottom: 20.7rem;
+  padding-top: 12.4rem;
+  @include d(inter) {
+    gap: 0;
+  }
+  @include d(medium) {
+    margin-bottom: 14.1rem;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 5.3rem;
+  }
+  @include d(small) {
+    margin-bottom: 7rem;
+    flex-direction: column;
+    gap: 0;
+  }
+  @include d(small) {
+    padding-top: 4rem;
+  }
+  h3 {
+    margin-bottom: 1.6rem;
+    @include d(inter) {
+      width: 480px;
+    }
+  }
+  .first-div {
+    @include d(inter) {
+      width: 50.4rem;
+    }
+    .email {
+      .email-icon {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        @include font-size(20);
+        color: $purple;
+        margin-bottom: 0.6rem;
+        i {
+          transform: scale(1);
+          &:hover {
+            color: $purple;
+          }
+        }
+        @include d(small) {
+          @include font-size(16);
+          color: $purple;
+          i {
+            @include font-size(20);
+            color: $purple;
+          }
+        }
+      }
+      .email-info {
+        @include font-size(20);
+        text-decoration: none;
+        @include d(small) {
+          @include font-size(16);
+        }
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin-top: 2.4rem;
+      margin-bottom: 6.4rem;
+      @include d(small) {
+        margin-top: 1.9rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+  .form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 14.1rem;
+    @include d(medium) {
+      margin-top: 6.4rem;
+    }
+    @include d(small) {
+      margin-top: 2.4rem;
+    }
+    p {
+      @include font-size(24);
+      font-weight: 500;
+      margin-bottom: 2.4rem;
+      @include d(inter) {
+        width: 50.4rem;
+      }
+      @include d(small) {
+        @include font-size(16);
+      }
+    }
+    form {
+      width: 63.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      max-width: 90.8rem;
+      @include d(inter) {
+        width: 50.4rem;
+      }
+      @include d(medium) {
+        width: 672px;
+        max-width: 720px;
+      }
+      @include d(small) {
+        width: 327px;
+        max-width: 375px;
+      }
+      @include d(x-small) {
+        width: 284px;
+        max-width: 320px;
+      }
+      input,
+      textarea {
+        background-color: $bg-cards;
+        padding: 1.9rem 3.2rem;
+        border: none;
+        border-radius: 0.8rem;
+        margin-bottom: 1.6rem;
+        @include font-size(16);
+        font-weight: 500;
+        &::placeholder {
+          @include font-size(16);
+          font-weight: 500;
+          color: $text-color;
+        }
+        &:focus {
+          outline: 0.3rem solid $pink;
+          &::placeholder {
+            color: transparent;
+          }
+        }
+        @include d(small) {
+          padding: 0.8rem 2.4rem;
+        }
+      }
+      textarea {
+        height: 34rem;
+        resize: none;
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4.8rem;
+        padding: 1.5rem 6.7rem;
+        @include font-size(16);
+        @include d(small) {
+          height: 4rem;
+          @include font-size(14);
+        }
+      }
+    }
+  }
+}

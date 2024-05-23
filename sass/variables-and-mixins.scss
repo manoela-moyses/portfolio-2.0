@@ -1,0 +1,54 @@
+//Colors
+$bg-dark-color: #181824;
+$body-color: #1a1a29;
+
+$purple: #7562e0;
+$pink: #da1381;
+$bg-gradient: linear-gradient(270deg, #da1381 0%, #7562e0 100%);
+$bg-table-gray: #bdbdbd;
+
+$text-color: #ffffff;
+
+$border: 0.3rem solid #7562e0;
+$bg-cards: #31313f;
+$hr-color: rgba(117, 98, 224, 0.1);
+
+//Typography
+$font: "Poppins", sans-serif;
+
+@mixin font-size($size) {
+  font-family: $font;
+  color: $text-color;
+  @if $size == 12 {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  @if $size == 14 {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+  @if $size == 16 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  @if $size == 18 {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+  @if $size == 20 {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
+  @if $size == 24 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+  @if $size == 32 {
+    font-size: 3.2rem;
+    line-height: 4.3rem;
+  }
+  @if $size == 48 {
+    font-size: 4.8rem;
+    line-height: 6.6rem;
+  }
+}
