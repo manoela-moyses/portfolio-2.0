@@ -405,12 +405,12 @@ export default function createProjects() {
 
     let imgContainer = document.createElement('div');
     imgContainer.classList.add('image-container');
-    
+
     let image = document.createElement('img');
     image.setAttribute('src', i.image);
     imgContainer.appendChild(image);
-    
-    
+
+
     document.getElementById('projects').appendChild(card);
     card.appendChild(container);
     card.appendChild(btnContainer);
