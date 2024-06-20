@@ -48,7 +48,7 @@
     margin-bottom: 3.2rem;
     color: $purple;
     @include d(x-small) {
-      @include font-size(20);
+      @include font-size(16);
       color: $purple;
       margin-bottom: 1.6rem;
     }
