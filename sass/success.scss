@@ -6,6 +6,7 @@
   align-items: center;
   max-width: 51.8rem;
   margin: 0 auto;
+  overflow-y: hidden;
   animation: fadein 1s 0.5s backwards;
 }
 .container-success {
@@ -30,9 +31,15 @@
     color: $text-color;
     padding-bottom: 1.6rem;
     transform: none;
+    @include d(x-small) {
+      font-size: 10rem;
+    }
   }
   p {
     @include font-size(32);
+    @include d(x-small) {
+      @include font-size(24);
+    }
   }
 }
 .send-email {
@@ -40,10 +47,18 @@
     @include font-size(24);
     margin-bottom: 3.2rem;
     color: $purple;
+    @include d(x-small) {
+      @include font-size(20);
+      color: $purple;
+      margin-bottom: 1.6rem;
+    }
   }
   a {
     text-decoration: none;
     @include font-size(24);
+    @include d(x-small) {
+      @include font-size(18);
+    }
   }
 }
 .success-link {

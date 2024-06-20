@@ -30,9 +30,15 @@
       color: $text-color;
       padding-bottom: 1.6rem;
       transform: none;
+      @include d(x-small) {
+        font-size: 10rem;
+      }
     }
     p {
       @include font-size(32);
+      @include d(x-small) {
+        @include font-size(24);
+      }
     }
   }
   .error-message {
@@ -40,10 +46,18 @@
       @include font-size(24);
       margin-bottom: 3.2rem;
       color: $pink;
+      @include d(x-small) {
+        @include font-size(20);
+        color: $pink;
+        margin-bottom: 1.6rem;
+      }
     }
     a {
       text-decoration: none;
       @include font-size(24);
+      @include d(x-small) {
+        @include font-size(18);
+      }
     }
   }
   .error-link {
