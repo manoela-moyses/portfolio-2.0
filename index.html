@@ -398,9 +398,8 @@
 
       <div class="form-div" data-anime="scroll-right">
         <p>Satisfeito comigo? Vamos lá, entre em contato.</p>
-        <form id="my-form" action="https://formsubmit.co/contato@manoelamoyses.net" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/success">
+        <form id="my-form" action="https://api.staticforms.xyz/submit" method="POST">
+          <input type="hidden" name="accessKey" value="2f4315c5-c1ab-4caf-a9e1-f60c3f51a078">
 
           <label class="sr-only" for="form-name"></label>
           <input type="text" name="name" id="form-name" placeholder="Nome:" required>
@@ -410,6 +409,7 @@
 
           <label class="sr-only" for="message"></label>
           <textarea name="message" id="message" placeholder="Mensagem:"></textarea>
+          <input type="hidden" name="redirectTo" value="https://manoelamoyses.net/pages/success">
 
           <div>
             <button type="submit" form="my-form" class="btn-gradient">Enviar</button>
